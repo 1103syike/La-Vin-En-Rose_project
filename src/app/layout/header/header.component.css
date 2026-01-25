@@ -1,0 +1,58 @@
+.header {
+    height: 100px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.30);
+    position: fixed;
+    z-index: 999;
+}
+
+.header__nav {
+    height: 100%;
+    display: flex;
+}
+
+.header__menu {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header__item {
+    color: #606060;
+    font-size: var(--fs-xl);
+    cursor: pointer;
+    font-weight: 500;
+
+}
+
+.header__link:hover {
+    color: #649255;
+}
+
+.header__link{
+    color: #606060;
+    text-decoration: none;
+}
+.iconfiy {
+    width: 28px;
+    height: 28px;
+}
+
+.header__item--logo {
+    margin-left:20px;
+    margin-right: auto;
+}
+.header__item--link {
+    margin-right: 100px;
+}
+
+.header__item--icon{
+    margin-right: 32px;
+}
+.header__item:nth-child(6) {
+    margin-right: auto;
+}
+.header__item:last-child {
+    margin-right: 40px;
+}
+

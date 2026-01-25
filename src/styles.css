@@ -1,1 +1,123 @@
-/* You can add global styles to this file, and also import other style files */
+@import "swiper/css";
+@import "swiper/css/pagination";
+@import "swiper/css/navigation";
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html { font-size: 16px; } /* 1rem */
+
+:root {
+  --fs-xs: 0.75rem;  /* 12px */
+  --fs-sm: 0.875rem; /* 14px */
+  --fs-base: 1rem;   /* 16px */
+  --fs-md: 1.125rem; /* 18px */
+  --fs-lg: 1.25rem;  /* 20px */
+  --fs-xl: 1.5rem;   /* 24px */
+  --fs-2xl: 2rem;    /* 32px */
+  --fs-mega-normal: 3.5rem;    /* 56px */
+  --fs-mega-huge: 4rem;    /* 64px */
+  --fs-title: 8rem;    /* 128px */
+}
+
+.emojione-monotone--shopping-cart {
+  display: inline-block;
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%23000' d='M61.063 2H58.25v.896c-3.916.876-4.479 4.511-4.7 5.9c-.105.657-.318 1.942-.582 3.516H3.988c-1.938 0-2.155 1.811-1.902 2.813l5.746 25.367c.252 1.002 1.313 1.82 2.353 1.82h42.944c1.034 0 1.877.841 1.877 1.875s-.843 1.875-1.877 1.875H6.255a1.874 1.874 0 1 0 0 3.75h2.43a7.5 7.5 0 0 0-3.872 6.563h1.875c0 3.105 2.52 5.625 5.625 5.625s5.625-2.52 5.625-5.625h1.875a7.5 7.5 0 0 0-3.873-6.563h26.494a7.5 7.5 0 0 0-3.873 6.563h1.875a5.627 5.627 0 0 0 11.252 0h1.875a7.5 7.5 0 0 0-3.872-6.563h3.44a5.63 5.63 0 0 0 5.625-5.625a5.626 5.626 0 0 0-5.627-5.625h-.697l2.398-14.91c.668-3.938 2.108-12.445 2.446-14.561c.17-1.069.335-1.82.974-2.241v.774h2.813A.94.94 0 0 0 62 6.688v-3.75A.94.94 0 0 0 61.063 2m-48.75 57.188A2.816 2.816 0 0 1 9.5 56.375h5.625a2.816 2.816 0 0 1-2.812 2.813m33.75 0a2.816 2.816 0 0 1-2.814-2.813h5.627a2.82 2.82 0 0 1-2.813 2.813m-2.307-42.194a1.07 1.07 0 0 1 1.04-.932h5.937c.516 0 .875.416.794.927l-.588 3.771c-.078.51-.567.927-1.084.927h-5.663a.826.826 0 0 1-.841-.932zm-1.009 9.375a1.07 1.07 0 0 1 1.04-.932h5.483c.517 0 .875.416.797.927l-.443 2.834c-.079.51-.567.927-1.084.927h-5.257a.828.828 0 0 1-.841-.932zM6.866 20.777l-.95-3.805c-.124-.502.198-.91.715-.91h7.059c.518 0 .985.419 1.04.932l.404 3.762a.828.828 0 0 1-.84.932H8.033c-.516 0-1.042-.411-1.167-.911m3.271 9.348c-.516 0-1.042-.41-1.166-.91l-.716-2.867c-.125-.502.195-.91.712-.91h5.729c.517 0 .985.419 1.04.932l.304 2.824a.827.827 0 0 1-.84.932zm5.969 8.438h-3.865c-.519 0-1.042-.41-1.167-.91l-.716-2.867c-.124-.502.196-.91.714-.91h4.53c.517 0 .985.419 1.042.932l.302 2.824a.826.826 0 0 1-.84.931m11.492-.938a.94.94 0 0 1-.94.938h-4.891a1.07 1.07 0 0 1-1.039-.932l-.304-2.824a.825.825 0 0 1 .839-.932h5.395a.94.94 0 0 1 .94.938zm0-8.437a.94.94 0 0 1-.94.938H20.86c-.516 0-.982-.419-1.04-.932l-.302-2.824a.826.826 0 0 1 .839-.932h6.301a.94.94 0 0 1 .94.938zm0-8.438a.94.94 0 0 1-.94.938h-6.702a1.07 1.07 0 0 1-1.04-.932l-.404-3.762a.827.827 0 0 1 .84-.932h7.307a.94.94 0 0 1 .94.938v3.75zm10.159 16.881a1.07 1.07 0 0 1-1.04.932h-4.42a.94.94 0 0 1-.939-.938v-2.813a.94.94 0 0 1 .939-.938h4.924c.516 0 .896.419.84.932zm.906-8.438a1.07 1.07 0 0 1-1.04.932h-5.326a.94.94 0 0 1-.939-.938v-2.813a.94.94 0 0 1 .939-.938h5.83c.517 0 .896.419.839.932zm.906-8.437a1.07 1.07 0 0 1-1.04.932h-6.232a.94.94 0 0 1-.939-.938V17a.94.94 0 0 1 .939-.938h6.837c.517 0 .896.419.841.932zm7.232 17.807v-.007l-.008.007h-4.416c-.029 0-.054-.014-.083-.018c-.005-.034-.005-.068-.011-.104l-.044.092l.037.008c-.461-.053-.791-.434-.738-.91l.302-2.824a1.07 1.07 0 0 1 1.04-.932h5.076c.517 0 .873.416.795.927l-.443 2.834c-.077.51-.565.927-1.082.927z'/%3E%3C/svg%3E");
+  background-color: currentColor;
+  -webkit-mask-image: var(--svg);
+  mask-image: var(--svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+
+.uiw--user {
+  display: inline-block;
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='%23000' d='M9.993 10.573a4.5 4.5 0 1 0 0-9a4.5 4.5 0 0 0 0 9M10 0a6 6 0 0 1 3.04 11.174c3.688 1.11 6.458 4.218 6.955 8.078c.047.367-.226.7-.61.745c-.383.045-.733-.215-.78-.582c-.54-4.19-4.169-7.345-8.57-7.345c-4.425 0-8.101 3.161-8.64 7.345c-.047.367-.397.627-.78.582c-.384-.045-.657-.378-.61-.745c.496-3.844 3.281-6.948 6.975-8.068A6 6 0 0 1 10 0'/%3E%3C/svg%3E");
+  background-color: currentColor;
+  -webkit-mask-image: var(--svg);
+  mask-image: var(--svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+
+.fe--search {
+  display: inline-block;
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' fill-rule='evenodd' d='m16.325 14.899l5.38 5.38a1.008 1.008 0 0 1-1.427 1.426l-5.38-5.38a8 8 0 1 1 1.426-1.426M10 16a6 6 0 1 0 0-12a6 6 0 0 0 0 12'/%3E%3C/svg%3E");
+  background-color: currentColor;
+  -webkit-mask-image: var(--svg);
+  mask-image: var(--svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+
+.carattere-regular {
+  font-family: "Carattere", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.pepicons-pop--flower {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cg fill='%23000'%3E%3Cpath fill-rule='evenodd' d='m12.588 2.366l-.071.078a18 18 0 0 1-.28.3l-.148-.195c-.308-.4-.568-.694-.847-.929c-.382-.323-.78-.518-1.242-.518c-.25 0-.487.061-.71.17c-.488.236-.85.631-1.333 1.306l-.12.17q-.137-.134-.32-.327l-.067-.07c-.554-.582-.701-.73-.949-.932c-.234-.191-.445-.32-.705-.384a1.13 1.13 0 0 0-1.357.726A7.4 7.4 0 0 0 4 4.288C4 8.228 6.212 11 10 11s6-2.771 6-6.712a7.4 7.4 0 0 0-.44-2.527a1.13 1.13 0 0 0-1.36-.724c-.262.067-.47.199-.7.395c-.24.202-.375.346-.912.934M10 9C7.428 9 6 7.21 6 4.288q0-.27.025-.533l.047.048c.408.428.66.672.92.872c.648.496 1.304.689 1.904.003c.108-.123.214-.262.356-.463l.075-.108l.257-.365c.175-.246.322-.427.429-.54a5 5 0 0 1 .493.569c-.045-.058.55.737.7.907c.602.689 1.266.49 1.899-.01c.25-.2.492-.443.874-.86q.021.239.021.48C14 7.211 12.572 9 10 9' clip-rule='evenodd'/%3E%3Cpath d='M9 11a1 1 0 1 1 2 0v6.5a1 1 0 1 1-2 0z'/%3E%3Cpath fill-rule='evenodd' d='M11.767 13.015c-2.185 1.834-3.622 4.165-2.438 5.576c1.166 1.39 4.38.628 6.295-.98c1.868-1.567 2.72-3.835 1.556-5.222s-3.545-.942-5.413.626m-.847 4.328a.2.2 0 0 1-.036-.018l.018.03q.011.01.018-.012m3.418-1.264c-1.107.93-3.014 1.422-3.418 1.264l.007-.03c.038-.189.156-.457.348-.769c.404-.656 1.077-1.409 1.778-1.997c1.134-.952 2.339-1.177 2.595-.872s-.175 1.452-1.31 2.404' clip-rule='evenodd'/%3E%3Cpath fill-rule='evenodd' d='M7.932 13.015c2.186 1.834 3.622 4.165 2.438 5.576c-1.166 1.39-4.379.628-6.294-.98c-1.869-1.567-2.72-3.835-1.556-5.222s3.544-.942 5.412.626m.848 4.328l.035-.018l-.018.03q-.011.01-.017-.012M5.36 16.08c1.108.93 3.015 1.422 3.419 1.264l-.007-.03c-.038-.189-.156-.457-.348-.769c-.405-.656-1.077-1.409-1.778-1.997c-1.135-.952-2.34-1.177-2.595-.872s.175 1.452 1.31 2.404' clip-rule='evenodd'/%3E%3C/g%3E%3C/svg%3E");
+  background-color: currentColor;
+  -webkit-mask-image: var(--svg);
+  mask-image: var(--svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}

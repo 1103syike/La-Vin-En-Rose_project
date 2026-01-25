@@ -1,0 +1,43 @@
+.swiper--home {
+    background-image: url(/home/swiper/background.jpg);
+    padding-top: 100px;
+    box-sizing: border-box;
+    position: relative;
+
+}
+
+.swiper__container {
+    width: 700px;
+    border-radius: 600px 600px 20px 20px;
+    border: 3px solid #FCF7EC;
+    overflow: hidden;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.swiper__img {
+    width: 650px;
+    border-radius: 600px 600px 20px 20px;
+    overflow: hidden;
+}
+
+
+.swiper__text {
+    position: absolute;
+    font-family: Carattere;
+    z-index: 2;
+    font-weight: normal;
+    color: #649255;
+}
+
+.swiper__text--top {
+    top: 120px;
+    font-size: var(--fs-mega-normal);
+    right: 80px;
+}
+
+.swiper__text--bottom {
+    font-size: var(--fs-mega-huge);
+    bottom: 4%;
+    left: 4%;
+}

@@ -1,13 +1,11 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { Header } from './layout/header/header';
 
+import { Component } from '@angular/core';
+import { RouterOutlet } from "@angular/router";
+
+//
 @Component({
-  selector: 'app-root',
-  imports: [RouterOutlet,Header],
-  template: '<app-header/>',
-  styleUrl: './app.css'
+selector:'app-root',
+template:`<router-outlet />`,
+imports: [RouterOutlet],
 })
-export class App {
-  protected readonly title = signal('La-Vin-En-Rose_project');
-}
+export class App {}

@@ -1,0 +1,80 @@
+.main {
+    width: 100%;
+}
+
+.main__header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 40px;
+}
+
+
+
+.main__banner--left {
+    width: calc(940 / (940 + 500) * 100%);
+    height: auto;
+}
+
+
+.main__banner--right {
+    height: auto;
+    width: calc(500 / (940 + 500) * 100%);
+}
+
+
+.main__title {
+    margin-left: 60px;
+    padding: 4px 12px;
+    display: inline-block;
+    flex-direction: row;
+    align-items: center;
+    font-size: var(--fs-2xl);
+    color: #FE9C39;
+    border-bottom: 3px solid #FE9C39;
+    font-weight: 500;
+}
+
+.main__rank {
+    position: relative;
+    width: calc((100 / 3) * 1%);
+}
+
+.main__rank-number {
+    font-size: 128px;
+    font-family: Verdana;
+    user-select: none;
+    font-weight: bold;
+    color: #FFDBA9;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #FFC172;
+}
+
+.main__block{
+    border-radius: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.main__image {
+    width:100%;
+    height: fit-content;
+    transition: transform 0.2s ease;
+}
+
+.main__rank:hover .main__image {
+    transform: scale(1.2);
+}
+.main__name,.main__price{
+    width: 100%;
+    color: #505050;
+    font-weight: 500;
+    font-size: var(--fs-xl);
+}
+.main__item{
+    transform: translate(20%,-20%);
+
+}
+.main__name{
+    margin-top: 12px;
+    margin-bottom: 24px;
+}

@@ -1,0 +1,35 @@
+.footer {
+    background-color: #D3E4CD;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0 20px 0;
+}
+
+.footer__logo {
+    width: 440px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.footer__list {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    margin-bottom: 12px;
+}
+
+
+.footer__item {
+    font-size: var(--fs-xl);
+    color: #606060;
+    cursor: pointer;
+}
+
+.footer__item:hover{
+    color: #649255;
+    font-weight: 500;
+}
+.footer__notice {
+    color: #606060;
+}
